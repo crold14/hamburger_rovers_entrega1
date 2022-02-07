@@ -117,6 +117,10 @@ header nav .menu li a {
     color: #aaa;
 }
 
+header nav .menu li:last-child a{
+    border-bottom: 0;
+}
+
 header nav .menu li a:hover, header nav .menu li .activo {
     color: var(--colorPrincipal)
 }
@@ -156,6 +160,85 @@ footer a:hover {
 }
 
 /* fin footer */
+
+/* inicio hero */
+
+.hero{
+    background-image: url(../images/fondo.jpg);
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    background-color: #aaa;
+    background-blend-mode: multiply;
+    display: flex;
+     
+}
+
+.hero .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    color: white;
+   
+}
+
+.hero h1{
+    font-family: var(--fuenteSecundaria);
+    font-size: calc(var(--fontSize)*2.3);
+    color: white;
+}
+
+.hero h2{
+    color: var(--colorPrincipal);
+    font-size: calc(var(--fontSize)*1.35);
+    margin: var(--marginGrid) 0px;
+    text-shadow: 1px 1px 3px black;
+}
+
+.hero p{
+    font-size: calc(var(--fontSize)*1.15);
+}
+
+.boton{
+    display: inline-block;
+    background-color: var(--colorPrincipal);
+    color: white;
+    text-decoration: none;
+    padding: 1.15em;
+    margin: var(--marginGrid) 0px;
+    border: 1px solid var(--colorPrincipal);
+
+}
+
+.boton i{
+    font-size: 95%;
+}
+
+.boton:hover{
+    background-color: transparent;
+    color: var(--colorPrincipal);
+
+}
+
+.boton:hover i{
+    transition: 0.5s;
+    transform: translateX(5px);
+}
+
+.hero .social{
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+    
+}
+
+.hero .social a{
+    color: white;
+    text-decoration: none;
+}
+
+/* fin hero */
 
 /* media queries 768px */
 
@@ -201,6 +284,5 @@ footer a:hover {
         padding: 0.4em 0em 0.4em 2.5em;
         border: 0;
     }
-
 
 }
