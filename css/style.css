@@ -273,11 +273,12 @@ main section .underline hr{
     
 }
 
-main section .underline span{
+main section .underline div p{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: white;
 }
 
 main #ourservices .flex{
@@ -351,6 +352,58 @@ main #aboutus{
 
 /* fin aboutus */
 
+/*inicio our blog  */
+
+main #ourblogs .flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main #ourblogs .flex article figure {
+    display: flex;
+    position: relative;
+}
+
+
+
+main #ourblogs .flex article figure div{
+
+    width: 35%;
+height: 50%;
+background-color: var(--colorPrincipal);
+position: absolute;
+text-align: center;
+justify-content: center;
+padding: 14%;
+color: white;
+opacity: 0.9;
+}
+
+
+main #ourblogs .flex article{
+    width: 100%;
+    padding: 2em 0;
+    border-bottom: 1px solid #aaa;
+}
+
+main #ourblogs .flex article h2{
+    font-weight: 700;
+    font-size: 110%;
+    margin: 0.5em 0em;
+}
+
+main #ourblogs .flex article p{
+    color: #777;
+    line-height: 1.10em;
+    margin-bottom: 0.5em;
+}
+
+
+
+
+
+
+/* fin ourblog */
 
 /* media query 600px */
 
@@ -395,6 +448,18 @@ main #aboutus{
 
  main #aboutus figure:hover :is(.marco, img){
     transform:rotateZ(0deg);
+ }
+
+  main #ourblogs .flex article{
+    width: calc(50% - var(--marginGrid)*2);
+    padding: 0 var(--marginGrid);
+    border-bottom: 0px;
+    margin: var(--marginGrid);
+
+}
+
+ main #ourblogs .flex article:last-child{
+    width: 100%;
  }
 
 
@@ -452,6 +517,14 @@ main #aboutus{
     }
     
     main #ourservices .flex article:last-child{
+    width: calc(33.333% - var(--marginGrid)*2);
+    }
+
+     main #ourblogs .flex article{
+    width: calc(33.333% - var(--marginGrid)*2);
+    }
+    
+    main #ourblogs .flex article:last-child{
     width: calc(33.333% - var(--marginGrid)*2);
     }
 
