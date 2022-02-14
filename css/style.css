@@ -265,6 +265,12 @@ main section .underline{
     color: var(--colorPrincipal);
     margin-bottom: 1em;
 }
+main section .underline span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 main section .underline hr{
 
@@ -368,14 +374,10 @@ main #ourblogs .flex article figure {
 
 main #ourblogs .flex article figure div{
 
-    width: 35%;
-height: 50%;
+width: 100px;
+height: 100px;
 background-color: var(--colorPrincipal);
 position: absolute;
-text-align: center;
-justify-content: center;
-padding: 14%;
-color: white;
 opacity: 0.9;
 }
 
@@ -383,27 +385,109 @@ opacity: 0.9;
 main #ourblogs .flex article{
     width: 100%;
     padding: 2em 0;
-    border-bottom: 1px solid #aaa;
+
 }
 
 main #ourblogs .flex article h2{
     font-weight: 700;
-    font-size: 110%;
+    font-size: 140%;
     margin: 0.5em 0em;
+    text-align: left;
+    font-family: var(--fuentePrincipal);
 }
 
-main #ourblogs .flex article p{
-    color: #777;
-    line-height: 1.10em;
-    margin-bottom: 0.5em;
+main #ourblogs .flex article figure p{
+   color: white;
+   text-align: center;
+   font-weight: 700;
+   font-size: 1.5em;
 }
 
+main #ourblogs .flex article .texto{
+    padding: 20px 20px 0 20px;
+    font-weight: 700;
+}
+
+main #ourblogs .flex article .texto p{
+    padding-bottom: 20px;
+    font-weight: 400;
+}
+main #ourblogs .flex article p:first-child{
+    padding-top: 15px;
+}
+
+main #ourblogs .flex article p:last-child{
+    padding-top: 15px;
+}
 
 
 
 
 
 /* fin ourblog */
+
+
+/* inicio menu */
+main #menu .container {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+main  #menu {
+    background-color: var(--colorSecundario);
+}
+main #menu .container h2,h3{
+    color: white;
+}
+
+main #menu .comidas ul{
+    padding: 1.5em 0;
+}
+main #menu .comidas ul li a{
+display: block;
+padding: 0.5em;
+text-decoration: none;
+color: white;
+border-radius: 3px;
+}
+
+.container .comidas li:hover a{
+    background-color: var(--colorPrincipal);
+    color: var(--colorPrincipal);
+
+}
+#menu .container .comidas hr{
+margin-left: 0;
+width: 50px;
+color: var(--colorPrincipal);
+}
+
+main #menu .comidas div{
+padding: 1.5em 0;
+}
+
+main #menu .container .offers article{
+    padding: 20px;
+    font-size: 0.7em;
+    line-height: 3em;
+}
+main #menu .container .offers article span{
+    padding-left: 20px;
+    color: var(--colorPrincipal);
+}
+
+main #menu .container .offers article h3{
+font-size: 110%;
+}
+main #menu .container .comidasyoffers{
+text-shadow: 1px 0px #aaa;
+}
+
+
+
+
+
+/* fin menu */
 
 /* media query 600px */
 
@@ -459,7 +543,7 @@ main #ourblogs .flex article p{
 }
 
  main #ourblogs .flex article:last-child{
-    width: 100%;
+    width: 45%;
  }
 
 
@@ -482,6 +566,11 @@ main #ourblogs .flex article p{
     footer {
         text-align: left;
     }
+    main #menu .container .offers article h3{
+    font-size: 150%;
+}  
+
+
 
 }
 
@@ -511,6 +600,10 @@ main #ourblogs .flex article p{
         padding: 0.4em 0em 0.4em 2.5em;
         border: 0;
     }
+    
+    main #ourblogs .flex article h2{
+        font-size: 110%;
+    }
 
     main #ourservices .flex article{
     width: calc(33.333% - var(--marginGrid)*2);
@@ -528,4 +621,35 @@ main #ourblogs .flex article p{
     width: calc(33.333% - var(--marginGrid)*2);
     }
 
+    main #menu .comidasyoffers{
+    display: flex;
+    padding: 20px 0;
+        
+    }
+   main #menu .comidasyoffers .comidas{
+    width: 30%;
+ 
+   }
+     main #menu .comidasyoffers .offers{
+    width: 70%;
+    padding-left: 35px;
+     }
+   main #menu .comidasyoffers .offers article{
+    display:flex;
+   }
+    main #menu .comidasyoffers .offers article figure{
+    max-width: 25%;
+    padding: 0 20px;
+    }
+
+    main #menu .comidasyoffers .comidas ul{
+        padding-bottom: 40px;
+    }
+
+    .arriba i{
+        display: none;
+    }
+    main #menu .container .offers article h3{
+    font-size: 150%;
+}
 }
